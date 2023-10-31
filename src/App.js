@@ -3,12 +3,14 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
+  const [data,setData] = useState({})
+  const [location, setLocation] = useState('')
 
-//const url = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid=b1c5b89a28a49878d7596078785708fb`
+const url = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid=b1c5b89a28a49878d7596078785708fb`
 
 
   return (
-    <div className="App">
+    <div className="app">
       <div className="container">
         <div className="top">
           <div className="location">
@@ -23,13 +25,16 @@ function App() {
         </div>
         <div className="bottom">
           <div className="feels">
-            <p>65°F</p>
+            <p className='bold'>65°F</p>
+            <p>Feels Like</p>
           </div>
           <div className="humidity">
-            <p>20%</p>
+            <p className='bold'>20%</p>
+            <p>Humidity</p>
         </div>
         <div className="wind">
-          12 MPH
+          <p className='bold'>12 MPH</p>
+          <p>Wind Speed</p>
         </div>
       </div>
     </div>
